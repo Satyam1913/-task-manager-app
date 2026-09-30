@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Cloud-deployed task tracker — Spring Boot + MySQL</p>
+    </header>
+
+    <form id="task-form">
+      <input type="text" id="title" placeholder="Task title" required maxlength="150">
+      <textarea id="description" placeholder="Description (optional)" maxlength="1000"></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="error-box" class="error-box hidden"></div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="ALL">All</button>
+      <button class="filter-btn" data-filter="PENDING">Pending</button>
+      <button class="filter-btn" data-filter="IN_PROGRESS">In Progress</button>
+      <button class="filter-btn" data-filter="COMPLETED">Completed</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
